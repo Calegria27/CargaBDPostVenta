@@ -56,8 +56,11 @@ response = service.spreadsheets().values().get(
     range='SABANA!A2:V'
     ).execute()
 
-
+data_PV[15]=data_PV[15].astype(str)
+data_PV[14]=data_PV[14].astype(str)
+data_PV[15]=data_PV[15].replace("None","")
 recordset = data_PV.values.tolist()
+
 
 """
 Insert rows
